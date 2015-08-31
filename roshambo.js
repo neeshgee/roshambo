@@ -87,7 +87,7 @@ var match = 0
   }
 
 
-  var userChoice = prompt(name + ", Rock, Paper, or Scissors? ");
+  var userChoice = prompt(name + ", rock, paper, or scissors? ");
   var computer = Math.random();
   var computerAnswer = null;
 
@@ -108,35 +108,40 @@ var match = 0
 
   if(winner == 1){
     log("You win the engagement");
-    userEngageScore++;
+    userEngageScore + 1;
 
 
   }
   else if(winner == 2) {
     log("The computer wins the engagement");
-    computerEngageScore++;
+    computerEngageScore + 1;
   }
 
 };
 
 
 
-if( userEngageScore == 2 || 3 ) {
-   userBoutScore++;
+if( userEngageScore == 2  ) {
+   userBoutScore + 1;
    log("You win the bout");
  }
- else if( computerEngageScore == 2 || 3) {
-   computerBoutScore++;
+ else if( computerEngageScore == 2 ) {
+   computerBoutScore + 1;
    log("Computer wins the bout");
  }
- if (userBoutScore == 2 || 3 ) {
+ if (userBoutScore == 2  ) {
    userMatchScore == 1
    log("Congrats! You win the match!!!");
  }
- else if(computerBoutScore == 2 || 3 ) {
+ else {
+   computerBoutScore == 2 
    computerMatchScore == 1
    log("The computer wins the match");
  }
+
+ //var rematch = prompt("Play again? yes or no");
+ //if( rematch = "yes") {
+    //engagement(userChoice, computerAnswer);
 
 
 
